@@ -21,7 +21,7 @@ A probabilistic system introduces randomness into the system, for a given input 
 
 ## An example Probabilistic System
 
-![](images/RainfallRunnoff_Probabilistic.jpg)
+![](images/RainfallRunoff_Probabilistic.jpg)
 ![](images/Hydraulics_Probabilistic.jpg)
 ![](images/Economics_Probabilistic.jpg)
 
