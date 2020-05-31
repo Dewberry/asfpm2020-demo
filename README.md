@@ -1,6 +1,5 @@
 # asfpm2020-demo
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Dewberry/asfpm2020-demo/master)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Examples in Jupyter Notebooks for  methods used in Probabilistic Flood Hazards Studies
@@ -32,6 +31,10 @@ As you see above, the deterministic flow could really produce a range of depths 
 
 ![](images/Economics_Probabilistic2.jpg)
 
+## Getting back to that "we dont really know the 100 year flow" bit...
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Dewberry/asfpm2020-demo/master)
 
+# Combining It all together with Event Sampling and Monte Carlo
+You might be wondering, how do we get this right? There are so many possible outcomes, how can we combine this correctly? The answer is simple, composition of functions with Riemann Integration obviously... (mathematicians think they are cool). The common language for this is A Systems Event Based Monte Carlo. 
 
 ![](images/sampling.gif)
