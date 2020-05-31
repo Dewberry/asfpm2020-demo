@@ -20,9 +20,14 @@ A probabilistic system introduces randomness into the system, for a given input 
 ![](images/Probabilistic.jpg)
 
 ## An example Probabilistic System
+This series of images helps to show more what a truthful representation of a system might be - firstly, for the same precipitation above, which we called the 100 year rainfall, we specifiy it as a given peak precip. We can talk more about what it might represent later, maybe we could say here "our best estimate peak 100 year precipitation..."
 
 ![](images/RainfallRunoff_Probabilistic.jpg)
+
+That precipitation as you might imagine above could realistically producs a range of flows. If we were to take the same flow as produced before.
 ![](images/Hydraulics_Probabilistic.jpg)
+
+
 ![](images/Economics_Probabilistic.jpg)
 
 
