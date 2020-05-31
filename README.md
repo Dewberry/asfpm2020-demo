@@ -2,8 +2,6 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Examples in Jupyter Notebooks for  methods used in Probabilistic Flood Hazards Studies
-
 ## Deterministic
 A deterministic system has no randomness at all, for a given input, there is a known output.
 ![](images/Deterministic.jpg)
@@ -32,6 +30,7 @@ As you see above, the deterministic flow could really produce a range of depths 
 ![](images/Economics_Probabilistic2.jpg)
 
 ## Getting back to that "we dont really know the 100 year flow" bit...
+Examples in Jupyter Notebooks for how we can use bootstrapping methods used in Probabilistic Flood Hazards Studies to express our limited knowledge due to limited observations:
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Dewberry/asfpm2020-demo/master)
 
 # Combining It all together with Event Sampling and Monte Carlo
