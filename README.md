@@ -55,7 +55,16 @@ You might be wondering, how do we get this right? There are so many possible out
 
 In this type of modeling framework, a series of deterministic runs, each with a randomized initial condition (which can be correlated or the same across models e.g. starting pool in the reservoirs if they are represented in many models) with each simulated event within a realization we are evaluating natural variability, with each realization we are evaluating our knowledge uncertainties. This gives us the ability to express our inability to know,and the natural variability of our sytems and combine the models into a singular system model that can support decision making.
 
+![](images/gridded.gif)
+
+# An Example Study
+
+## Study Area
+In this example, we had a study area on a regulated river with a levee providing risk mitigation to an area with many buildings. An empirical frequency curve with uncertainty was developed and utilized to describe the flow in the river and how the regulation of the upstream dam impacts the flow boundary condition. A few historic shapesets were leveraged for scaling the flod hydrograph. The area had two locations that were modeled as likely breach locations (these are signified by the yellow dots in the image below). The breach locations included fragility curves to describe the likelihood that the levee might breach when loaded. These were one of the initial conditions sampled within the hydrauilcs model.
+
 ![](images/StudyArea.jpg)
+
+
 ![](images/timesWet.jpg)
 ![](images/AEP_WithBreaches.jpg)
 ![](images/AEP_Structure.jpg)
