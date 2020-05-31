@@ -45,7 +45,7 @@ As you see above, the deterministic flow could really produce a range of depths 
 ## Getting back to that "we dont really know the 100 year flow" bit...
 Examples in Jupyter Notebooks for how we can use bootstrapping methods used in Probabilistic Flood Hazards Studies to express our limited knowledge due to limited observations:
 
-![The master Notebook](https://mybinder.org/v2/gh/Dewberry/asfpm2020-demo/master)
+[The master Notebook](https://mybinder.org/v2/gh/Dewberry/asfpm2020-demo/master)
 
 ![](images/bootstraps.gif)
 
