@@ -41,3 +41,9 @@ You might be wondering, how do we get this right? There are so many possible out
 ![](images/sampling.gif)
 
 In this type of modeling framework, a series of deterministic runs, each with a randomized initial condition (which can be correlated or the same across models e.g. starting pool in the reservoirs if they are represented in many models) with each simulated event within a realization we are evaluating natural variability, with each realization we are evaluating our knowledge uncertainties. This gives us the ability to express our inability to know,and the natural variability of our sytems and combine the models into a singular system model that can support decision making.
+
+![](images/StudyArea.jpg)
+![](images/timesWet.jpg)
+![](images/AEP_WithBreaches.jpg)
+![](images/AEP_Structure.jpg)
+![](images/EAD_Structure.jpg)
