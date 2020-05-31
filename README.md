@@ -62,21 +62,34 @@ Through this type of modeling each event is equally likely to occur, so the resu
 # An Example Study
 
 ## Study Area
-In this example, we had a study area on a regulated river with a levee providing risk mitigation to an area with many buildings. An empirical frequency curve with uncertainty was developed and utilized to describe the flow in the river and how the regulation of the upstream dam impacts the flow boundary condition. A few historic shapesets were leveraged for scaling the flod hydrograph. 
-
-![](images/bootstrapped_HS.jpg)
-
-The area had two locations that were modeled as likely breach locations (these are signified by the yellow dots in the image below). The breach locations included fragility curves to describe the likelihood that the levee might breach when loaded. These were one of the initial conditions sampled within the hydrauilcs model. We computed 10,000 events using HEC-WAT with the Hydrologic Sampler, HEC-RAS, the Fragility Curve Sampler, a consequence engine, and the AEP_Grid to produce the results shown in the images that follow.
+In this example, we had a study area on a regulated river with a levee providing risk mitigation to an area with many buildings. The area had two locations that were modeled as likely breach locations (these are signified by the yellow dots in the image below). The breach locations included fragility curves to describe the likelihood that the levee might breach when loaded. These were one of the initial conditions sampled within the hydrauilcs model. We computed 10,000 events using HEC-WAT with the Hydrologic Sampler, HEC-RAS, the Fragility Curve Sampler, a consequence engine, and the AEP_Grid to produce the results shown in the images that follow.
 
 ![](images/StudyArea.jpg)
 
+## Representing the Natural Variability and Knowledge Uncertainty in Flow
+
+An empirical frequency curve with uncertainty was developed and utilized to describe the flow in the river and how the regulation of the upstream dam impacts the flow boundary condition. A few historic shapesets were leveraged for scaling the flod hydrograph. 
+
+![](images/bootstrapped_HS.jpg)
+
+## Summarizing Hydraulics Output
+It can be quite complicated to manage the volume of data produced by large scale Monte Carlo modeling. To facilitate communication, minimize data storage, and to enhance reproducability we have constructed some useful tools to support the summarization of hydraulic results.
+
+### Times Wet Grid
 As we showed in the images above, we can create a summary grid from each sampled event to produce a database that stores how many times a gridcell gets depth above ground. The image below is a map that represents that database. As you can see, there is variation in the number of times the cells behind a levee get wet. This is due to the presence or absence of a breach, which location breached, if one breached before the other, the peak flow, the shape of the hydrograph, topographical relief, and many other conditions governing the way flow gets converted into depth. Even though the levee may have a specified overtopping frequency for its design, all cells within the leveed area will not necessarily get wet the same number of times, that depends on the characteristics of the events themselves.
 
 ![](images/timesWet.jpg)
 
+### Annual Exceedance Probability Grid
 This grid can be easily converted into an Annual Exceedance Probability grid by simply dividing by the number of events that were used to create it. in out case there were 10,000 events. The cells now represent a likelihood of getting water above the ground elevation. Similar grids can be constructed from any sort of output parameter and threshold criteria (e.g. a Annual Velocity Exceedance Grid which represents likelihood of Velocity over some threshold).
 
 ![](images/AEP_WithBreaches.jpg)
 
+### Annual Exceedance Probability at a building 
+Another interesting view of the hydrauilcs results across a floodplain is a desription of the count of times a structure gets wet. In this case we tracked depth above ground, but the depth above first floor elevation (unique to each structure) could just as easily be tracked.
+
 ![](images/AEP_Structure.jpg)
+
+## Summarizing Economic Damages
+
 ![](images/EAD_Structure.jpg)
