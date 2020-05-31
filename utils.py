@@ -219,19 +219,37 @@ def add_emperical_plot_full(aeps, aep_qs, emp_q, emp_ri, skew, mu, sigma, color=
     return f, a
 
 
-def add_boostrap_plot_full(aeps, aep_qs, skew, mu, sigma, nbs=1, nsamples=50, color="brown", s=25):
+def add_bootstrap_plot_full(aeps, aep_qs, skew, mu, sigma, nbs=1, nsamples=50, color="brown", s=25):
     f, a = plot_aep_full(aeps, aep_qs, skew, mu, sigma)
     for i in range(0, nbs):
         r = pearson3.rvs(skew, loc=mu, scale=sigma, size=nsamples)
         emp_q, emp_ri = ecdf(r)
         a.scatter(x=emp_ri, y=sorted(10 ** np.array(emp_q), reverse=True), color=color, s=s)
+    a.set_title(f"{nbs} Bootstraps", fontsize=20)
     return f, a
 
 
-def add_boostrap_plot_from_sample_pop_full(aeps, aep_qs, skew, mu, sigma, nbs=1, nsamples=10, color="brown", s=25):
+def add_bootstrap_plot_from_sample_pop_full(
+    aeps, aep_qs, skew, mu, sigma, rskew, rskew_mse, nbs=1, nsamples=10, color="brown", nx=200, s=25
+):
     f, a = plot_aep_full(aeps, aep_qs, skew, mu, sigma)
+    xs = np.linspace(0.9999, 0.0001, nx)
+
     for i in range(0, nbs):
-        r = np.random.choice(aep_qs, size=nsamples)
-        emp_q, emp_ri = ecdf(r)
-        a.scatter(x=emp_ri, y=sorted(emp_q, reverse=True), color="brown", s=s)
+        rvs = np.random.choice(aep_qs, size=nsamples)
+        lp3_data = LP3(rvs)
+        log_peaks = lp3_data.log
+        skew_new = lp3_data.weighted_skew(rskew, rskew_mse)
+        mu_new = lp3_data.log.mean()
+        sigma_new = lp3_data.log.std()
+
+        ys = []
+        for x in xs:
+            ys.append(10 ** pearson3.ppf(1 - x, skew_new, loc=mu_new, scale=sigma_new))
+
+        # Some Unusual Behavior results in negative skew?
+        # Reversing here for plotting, need to debug this.
+        if skew_new > 0:
+            a.scatter(x=xs, y=ys, color=color, s=s)
+    a.set_title(f"{nsamples}: Samples -- {nbs} Bootstraps", fontsize=20)
     return f, a
