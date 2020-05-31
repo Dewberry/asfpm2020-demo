@@ -69,7 +69,7 @@ In this example, we had a study area on a regulated river with a levee providing
 
 ## Representing the Natural Variability and Knowledge Uncertainty in Flow
 
-An empirical frequency curve with uncertainty was developed and utilized to describe the flow in the river and how the regulation of the upstream dam impacts the flow boundary condition. A few historic shapesets were leveraged for scaling the flod hydrograph. 
+An empirical frequency curve with uncertainty was developed and utilized to describe the flow in the river and how the regulation of the upstream dam impacts the flow boundary condition. A few historic shapesets were leveraged for scaling the flod hydrograph. As you can see here we have 20 realizations of 500 events each to construct the 10,000 events. This allows us to compute 20 different estimates (one for each realization) for any of our decision metrics. 
 
 ![](images/bootstrapped_HS.jpg)
 
@@ -77,20 +77,23 @@ An empirical frequency curve with uncertainty was developed and utilized to desc
 It can be quite complicated to manage the volume of data produced by large scale Monte Carlo modeling. To facilitate communication, minimize data storage, and to enhance reproducability we have constructed some useful tools to support the summarization of hydraulic results.
 
 ### Times Wet Grid
-As we showed in the images above, we can create a summary grid from each sampled event to produce a database that stores how many times a gridcell gets depth above ground. The image below is a map that represents that database. As you can see, there is variation in the number of times the cells behind a levee get wet. This is due to the presence or absence of a breach, which location breached, if one breached before the other, the peak flow, the shape of the hydrograph, topographical relief, and many other conditions governing the way flow gets converted into depth. Even though the levee may have a specified overtopping frequency for its design, all cells within the leveed area will not necessarily get wet the same number of times, that depends on the characteristics of the events themselves.
+As we showed in the images above, we can create a summary grid from each sampled event to produce a database that stores how many times a gridcell gets depth above ground. The image below is a map that represents that database. As you can see, there is variation in the number of times the cells behind a levee get wet. This is due to the presence or absence of a breach, which location breached, if one breached before the other, the peak flow, the shape of the hydrograph, topographical relief, and many other conditions governing the way flow gets converted into depth. Even though the levee may have a specified overtopping frequency for its design, all cells within the leveed area will not necessarily get wet the same number of times, that depends on the characteristics of the events themselves. One of these grids can be created based off of a summary of all of the realizations (representing our best estimate) and for each realization independantly giving us the abiilty to express our uncertainty in how many times a cell might get wet.
 
 ![](images/timesWet.jpg)
 
 ### Annual Exceedance Probability Grid
-This grid can be easily converted into an Annual Exceedance Probability grid by simply dividing by the number of events that were used to create it. in out case there were 10,000 events. The cells now represent a likelihood of getting water above the ground elevation. Similar grids can be constructed from any sort of output parameter and threshold criteria (e.g. a Annual Velocity Exceedance Grid which represents likelihood of Velocity over some threshold).
+This grid can be easily converted into an Annual Exceedance Probability grid by simply dividing by the number of events that were used to create it. in out case there were 10,000 events. The cells now represent a likelihood of getting water above the ground elevation. Similar grids can be constructed from any sort of output parameter and threshold criteria (e.g. a Annual Velocity Exceedance Grid which represents likelihood of Velocity over some threshold). 
 
 ![](images/AEP_WithBreaches.jpg)
 
+Like the previous summary grid we could create a singular representation (like the one presented above) showing our best guess at the likelihood of a cell getting wet, or we could create 20 different grids and summarize the variation in estimates at each cell as a distribution of Expected Annual Exceedance Probabilities.
+
+
 ### Annual Exceedance Probability at a building 
-Another interesting view of the hydrauilcs results across a floodplain is a desription of the count of times a structure gets wet. In this case we tracked depth above ground, but the depth above first floor elevation (unique to each structure) could just as easily be tracked.
+Another interesting view of the hydrauilcs results across a floodplain is a desription of the count of times a structure gets wet. In this case we tracked depth above ground, but the depth above first floor elevation (unique to each structure) could just as easily be tracked. These could be displayed as our best estimate of the likelihood of the ground around a home getting wet, or a distribution of the likelihoods (based on a summary of the 20 realizations) a structure gets wet.
 
 ![](images/AEP_Structure.jpg)
 
 ## Summarizing Economic Damages
-
+During the Monte Carlo process many variables are unknown in how much damage may happen for a given depth at the structure. These are sampled with each event and summarized into an Expected Annual Damage at each structure. The summary is simply computing the average damage. As described with the other outputs we can describe a distribution of the Expected Annual Damages for each structure which represents our inability to "know" what the true expected annual damage at a structure will be. 
 ![](images/EAD_Structure.jpg)
