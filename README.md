@@ -22,15 +22,15 @@ A probabilistic system introduces randomness into the system, for a given input 
 ## An example Probabilistic System
 This series of images helps to show more what a truthful representation of a system might be - firstly, for the same precipitation above, which we called the 100 year rainfall, we specifiy it as a given peak precip. We can talk more about what it might represent later, maybe we could say here "our best estimate peak 100 year precipitation..."
 
-![](images/RainfallRunoff_Probabilistic.jpg)
+![](images/RainfallRunoff_Probabilistic2.jpg)
 
 That precipitation as you might imagine above could realistically producs a range of flows. If we were to take the same flow as produced before in the deterministic model and imagine using a probabilistic model for the computation of stage (or water depth at a structure) we would see a range of depths because we dont really know the initial conditions or behaviors of the system.
 
-![](images/Hydraulics_Probabilistic.jpg)
+![](images/Hydraulics_Probabilistic2.jpg)
 
 As you see above, the deterministic flow could really produce a range of depths at the structure, if we were to take that same deterministic depth and compute a probabilistic damage, we see there could really be a range of damages because we dont really know everything about what would result in damages in an "average" house.
 
-![](images/Economics_Probabilistic.jpg)
+![](images/Economics_Probabilistic2.jpg)
 
 
 
