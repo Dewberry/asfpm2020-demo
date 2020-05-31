@@ -2,6 +2,12 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
+## Objectives
+
+- Discuss Deterministic and Probabilistic Systems
+- Discuss the limits of what we can claim to know
+- Discuss how we can make decisions inlight of not knowing something now or in the future
+
 ## Deterministic
 A deterministic system has no randomness at all, for a given input, there is a known output.
 ![](images/Deterministic.jpg)
