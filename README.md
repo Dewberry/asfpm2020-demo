@@ -24,9 +24,11 @@ This series of images helps to show more what a truthful representation of a sys
 
 ![](images/RainfallRunoff_Probabilistic.jpg)
 
-That precipitation as you might imagine above could realistically producs a range of flows. If we were to take the same flow as produced before.
+That precipitation as you might imagine above could realistically producs a range of flows. If we were to take the same flow as produced before in the deterministic model and imagine using a probabilistic model for the computation of stage (or water depth at a structure) we would see a range of depths because we dont really know the initial conditions or behaviors of the system.
+
 ![](images/Hydraulics_Probabilistic.jpg)
 
+As you see above, the deterministic flow could really produce a range of depths at the structure, if we were to take that same deterministic depth and compute a probabilistic damage, we see there could really be a range of damages because we dont really know everything about what would result in damages in an "average" house.
 
 ![](images/Economics_Probabilistic.jpg)
 
