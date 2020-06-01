@@ -15,8 +15,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <!-- General and theme style sheets -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -24,14 +24,14 @@ if( window.location.search.match( /print-pdf/gi ) ) {
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/pdf.css';
+        link.href = 'reveal.js/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
 }
 
 </script>
 
 <!--[if lt IE 9]>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/html5shiv.js"></script>
+<script src="reveal.js/lib/js/html5shiv.js"></script>
 <![endif]-->
 
 <!-- Loading the mathjax macro -->
@@ -13202,9 +13202,20 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="asfpm2020-demo">asfpm2020-demo<a class="anchor-link" href="#asfpm2020-demo">&#182;</a></h1><p>Probabilistic Flood Risk Analysis to Support Risk Informed Decision-Making: Examples and Materials</p>
-<p>Seth Lawler</p>
-<p>Will Lehman</p>
+<h1 id="Probabilistic-Flood-Risk-Analysis-to-Support-Risk-Informed-Decision-Making">Probabilistic Flood Risk Analysis to Support Risk Informed Decision-Making<a class="anchor-link" href="#Probabilistic-Flood-Risk-Analysis-to-Support-Risk-Informed-Decision-Making">&#182;</a></h1><h2 id="ASFPM-2020">ASFPM 2020<a class="anchor-link" href="#ASFPM-2020">&#182;</a></h2><p><em>Seth Lawler and Will Lehman</em></p>
+<p><img src="images/usace-dewberry.png" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Discussion-Objectives">Discussion Objectives<a class="anchor-link" href="#Discussion-Objectives">&#182;</a></h2><ul>
+<li>Deterministic and Probabilistic Systems</li>
+<li>The limits of what we can claim to know</li>
+<li>How we can make decisions in light of not knowing something now or in the future</li>
+</ul>
 
 </div>
 </div>
@@ -13221,8 +13232,8 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="An-example-Deterministic-System">An example Deterministic System<a class="anchor-link" href="#An-example-Deterministic-System">&#182;</a></h2><p>In this process for a 100 year precip (if we actually could say we knew what that was) we compute a flow (which is not likely to be the 100 year flow) which produces a stage, and then a damage...</p>
-<p><img src="images/DeterministicProcess2.jpg" alt=""></p>
+<h2 id="An-example-Deterministic-System">An example Deterministic System<a class="anchor-link" href="#An-example-Deterministic-System">&#182;</a></h2><p><img src="images/DeterministicProcess2.jpg" alt=""></p>
+<p>In this process, for a 100 year precipitation event (assuming we actually could say we knew what that was!) we compute a flow (which is not likely to be the 100 year flow) which produces a stage, and then a damage...</p>
 
 </div>
 </div>
@@ -13230,8 +13241,8 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Probabilistic">Probabilistic<a class="anchor-link" href="#Probabilistic">&#182;</a></h2><p>A probabilistic system introduces randomness into the system by varying things like initial conditions, and as a comparitive definition to our deterministic definition: In a probabilistic system, for a given input and a set of random initial conditions, we produce a distribution of outputs.</p>
-<p><img src="images/Probabilistic.jpg" alt=""></p>
+<h2 id="Probabilistic">Probabilistic<a class="anchor-link" href="#Probabilistic">&#182;</a></h2><p><img src="images/Probabilistic.jpg" alt=""></p>
+<p>A probabilistic system introduces randomness into the system by varying things like initial conditions. As a comparative definition to our deterministic definition: In a probabilistic system, for a given input and a set of random initial conditions, we produce a distribution of outputs.</p>
 
 </div>
 </div>
@@ -13239,8 +13250,15 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="An-example-Probabilistic-System">An example Probabilistic System<a class="anchor-link" href="#An-example-Probabilistic-System">&#182;</a></h2><p>This series of images helps to show more what a truthful representation of a system might be - firstly, for the same precipitation above, which we called the 100 year rainfall, we specifiy it as a given peak precip. We can talk more about what it might represent later, maybe we could say here "our best estimate peak 100 year precipitation..."</p>
-<p><img src="images/RainfallRunoff_Probabilistic3.jpg" alt=""></p>
+<h1 id="An-example-Probabilistic-System">An example Probabilistic System<a class="anchor-link" href="#An-example-Probabilistic-System">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Rainfall-Runoff">Rainfall Runoff<a class="anchor-link" href="#Rainfall-Runoff">&#182;</a></h3><p><img src="images/RainfallRunoff_Probabilistic3.jpg" alt=""></p>
+<p>This series of images helps to show more what a truthful representation of a system might be - firstly, for the same precipitation above(which we called the 100 year rainfall), let's look at intensity and duration for the same volume. We can talk more about what the challenges of statistics for precipitation events later...for this example, let's say here "our best estimate peak 100 year precipitation..."</p>
 
 </div>
 </div>
@@ -13248,8 +13266,8 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>That precipitation as you might imagine above could realistically producs a range of flows. If we were to take the same flow as produced before in the deterministic model and imagine using a probabilistic model for the computation of stage (or water depth at a structure) we would see a range of depths because we dont really know the initial conditions or behaviors of the system.</p>
-<p><img src="images/Hydraulics_Probabilistic3.jpg" alt=""></p>
+<h3 id="Hydraulics">Hydraulics<a class="anchor-link" href="#Hydraulics">&#182;</a></h3><p><img src="images/Hydraulics_Probabilistic3.jpg" alt=""></p>
+<p>The precipitation event above could realistically produce a range of flows. If we were to take the same flow as produced before in the deterministic model and imagine using a probabilistic model for the computation of stage (or water depth at a structure) we would see a range of depths because we don't really know the initial conditions or behaviors of the system.</p>
 
 </div>
 </div>
@@ -13257,8 +13275,8 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As you see above, the deterministic flow could really produce a range of depths at the structure, if we were to take that same deterministic depth and compute a probabilistic damage, we see there could really be a range of damages because we dont really know everything about what would result in damages in an "average" house.</p>
-<p><img src="images/Economics_Probabilistic3.jpg" alt=""></p>
+<h3 id="Damages">Damages<a class="anchor-link" href="#Damages">&#182;</a></h3><p><img src="images/Economics_Probabilistic3.jpg" alt=""></p>
+<p>As you see above, the deterministic flow could really produce a range of depths at the structure. If we were to take that same deterministic depth and compute a probabilistic damage, we see there could really be a range of damages because we don't really know everything about what would result in damages in an "average" house.</p>
 
 </div>
 </div>
@@ -13266,8 +13284,9 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Getting-back-to-that-&quot;we-dont-really-know-the-100-year-flow&quot;-bit...">Getting back to that "we dont really know the 100 year flow" bit...<a class="anchor-link" href="#Getting-back-to-that-&quot;we-dont-really-know-the-100-year-flow&quot;-bit...">&#182;</a></h2><p>Examples in Jupyter Notebooks for how we can use bootstrapping methods used in Probabilistic Flood Hazards Studies to express our limited knowledge due to limited observations:</p>
+<h2 id="Let's-take-a-closer-look-at-the-&quot;What-is-the-100-year-event&quot;-problem...">Let's take a closer look at the "What is the 100 year event" problem...<a class="anchor-link" href="#Let's-take-a-closer-look-at-the-&quot;What-is-the-100-year-event&quot;-problem...">&#182;</a></h2><p><a href="https://mybinder.org/v2/gh/Dewberry/asfpm2020-demo/master">Start an Interactive Notebook</a></p>
 <p><img src="images/bootstraps.gif" alt=""></p>
+<p>Using examples in Jupyter Notebooks, let's walk through the process of using bootstrapping methods used in Probabilistic Flood Hazards Studies to express our limited knowledge due to limited observations:</p>
 
 </div>
 </div>
@@ -13275,8 +13294,8 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Combining-It-all-together-with-Event-Sampling-and-Monte-Carlo">Combining It all together with Event Sampling and Monte Carlo<a class="anchor-link" href="#Combining-It-all-together-with-Event-Sampling-and-Monte-Carlo">&#182;</a></h1><p>You might be wondering, how do we get this right? There are so many possible outcomes, how can we combine this correctly? The answer is simple, composition of functions with Riemann Integration obviously... (mathematicians think they are cool). The common language for this is A Systems Event Based Monte Carlo.</p>
-<p><img src="images/sampling.gif" alt=""></p>
+<h1 id="Combining-It-all-together-with-Event-Sampling-and-Monte-Carlo">Combining It all together with Event Sampling and Monte Carlo<a class="anchor-link" href="#Combining-It-all-together-with-Event-Sampling-and-Monte-Carlo">&#182;</a></h1><p><img src="images/sampling.gif" alt=""></p>
+<p>You might be wondering, how do we get this right? There are so many possible outcomes, how can we combine this correctly? The answer is simple, composition of functions with Riemann Integration obviously...(mathematicians think they are cool). The common language for this is <code>A Systems Event Based Monte Carlo</code>.</p>
 
 </div>
 </div>
@@ -13284,8 +13303,9 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this type of modeling framework, a series of deterministic runs, each with a randomized initial condition (which can be correlated or the same across models e.g. starting pool in the reservoirs if they are represented in many models) with each simulated event within a realization we are evaluating natural variability, with each realization we are evaluating our knowledge uncertainties. This gives us the ability to express our inability to know,and the natural variability of our sytems and combine the models into a singular system model that can support decision making.</p>
-<p><img src="images/StudyArea.jpg" alt=""></p>
+<p><img src="images/gridded_compute.gif" alt=""></p>
+<p>In this type of modeling framework, a series of deterministic runs, each with a randomized initial condition (which can be correlated or the same across models e.g. starting pool in the reservoirs if they are represented in many models) with each simulated event within a realization we are evaluating natural variability, with each realization we are evaluating our knowledge uncertainties. This gives us the ability to express our inability to know,and the natural variability of our systems and combine the models into a singular system model that can support decision making.</p>
+<p>Through this type of modeling each event is equally likely to occur, so the resulting floodplains and damages can be utilized to describe the distribution of expected losses through simple computations like the one shown above.</p>
 
 </div>
 </div>
@@ -13293,7 +13313,15 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/timesWet.jpg" alt=""></p>
+<h1 id="An-Example-Study">An Example Study<a class="anchor-link" href="#An-Example-Study">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Study-Area">Study Area<a class="anchor-link" href="#Study-Area">&#182;</a></h2><p><img src="images/StudyArea.jpg" alt=""></p>
+<p>In this example, we had a study area on a regulated river with a levee providing risk mitigation to an area with many buildings. The area had two locations that were modeled as likely breach locations (these are signified by the yellow dots in the image below). The breach locations included fragility curves to describe the likelihood that the levee might breach when loaded. These were one of the initial conditions sampled within the hydraulics model. We computed 10,000 events using HEC-WAT with the Hydrologic Sampler, HEC-RAS, the Fragility Curve Sampler, a consequence engine, and the AEP_Grid to produce the results shown in the images that follow.</p>
 
 </div>
 </div>
@@ -13301,7 +13329,8 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/AEP_WithBreaches.jpg" alt=""></p>
+<h2 id="Representing-the-Natural-Variability-and-Knowledge-Uncertainty-in-Flow">Representing the Natural Variability and Knowledge Uncertainty in Flow<a class="anchor-link" href="#Representing-the-Natural-Variability-and-Knowledge-Uncertainty-in-Flow">&#182;</a></h2><p><img src="images/bootstrapped_HS.jpg" alt=""></p>
+<p>An empirical frequency curve with uncertainty was developed and utilized to describe the flow in the river and how the regulation of the upstream dam impacts the flow boundary condition. A few historic shape-sets were leveraged for scaling the flood hydrograph. As you can see here we have 20 realizations of 500 events each to construct the 10,000 events. This allows us to compute 20 different estimates (one for each realization) for any of our decision metrics.</p>
 
 </div>
 </div>
@@ -13309,7 +13338,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/AEP_Structure.jpg" alt=""></p>
+<h2 id="Summarizing-Hydraulics-Output">Summarizing Hydraulics Output<a class="anchor-link" href="#Summarizing-Hydraulics-Output">&#182;</a></h2><p>It can be quite complicated to manage the volume of data produced by large scale Monte Carlo modeling. To facilitate communication, minimize data storage, and to enhance reproducibility we have constructed some useful tools to support the summarization of hydraulic results.</p>
 
 </div>
 </div>
@@ -13317,7 +13346,36 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="images/EAD_Structure.jpg" alt=""></p>
+<h3 id="Times-Wet-Grid">Times Wet Grid<a class="anchor-link" href="#Times-Wet-Grid">&#182;</a></h3><p><img src="images/timesWet.jpg" alt=""></p>
+<p>As we showed in the images above, we can create a summary grid from each sampled event to produce a database that stores how many times a gridcell gets depth above ground. The image below is a map that represents that database. As you can see, there is variation in the number of times the cells behind a levee get wet. This is due to the presence or absence of a breach, which location breached, if one breached before the other, the peak flow, the shape of the hydrograph, topographical relief, and many other conditions governing the way flow gets converted into depth. Even though the levee may have a specified overtopping frequency for its design, all cells within the leveed area will not necessarily get wet the same number of times, that depends on the characteristics of the events themselves. One of these grids can be created based off of a summary of all of the realizations (representing our best estimate) and for each realization independently giving us the ability to express our uncertainty in how many times a cell might get wet.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Annual-Exceedance-Probability-Grid">Annual Exceedance Probability Grid<a class="anchor-link" href="#Annual-Exceedance-Probability-Grid">&#182;</a></h3><p><img src="images/AEP_WithBreaches.jpg" alt=""></p>
+<p>This grid can be easily converted into an Annual Exceedance Probability grid by simply dividing by the number of events that were used to create it. in out case there were 10,000 events. The cells now represent a likelihood of getting water above the ground elevation. Similar grids can be constructed from any sort of output parameter and threshold criteria (e.g. a Annual Velocity Exceedance Grid which represents likelihood of Velocity over some threshold).</p>
+<p>Like the previous summary grid we could create a singular representation (like the one presented above) showing our best guess at the likelihood of a cell getting wet, or we could create 20 different grids and summarize the variation in estimates at each cell as a distribution of Expected Annual Exceedance Probabilities.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Annual-Exceedance-Probability-at-a-building">Annual Exceedance Probability at a building<a class="anchor-link" href="#Annual-Exceedance-Probability-at-a-building">&#182;</a></h3><p><img src="images/AEP_Structure.jpg" alt=""></p>
+<p>Another interesting view of the hydraulics results across a floodplain is a description of the count of times a structure gets wet. In this case we tracked depth above ground, but the depth above first floor elevation (unique to each structure) could just as easily be tracked. These could be displayed as our best estimate of the likelihood of the ground around a home getting wet, or a distribution of the likelihoods (based on a summary of the 20 realizations) a structure gets wet.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Summarizing-Economic-Damages">Summarizing Economic Damages<a class="anchor-link" href="#Summarizing-Economic-Damages">&#182;</a></h2><p><img src="images/EAD_Structure.jpg" alt=""></p>
+<p>During the Monte Carlo process many variables are unknown in how much damage may happen for a given depth at the structure. These are sampled with each event and summarized into an Expected Annual Damage at each structure. The summary is simply computing the average damage. As described with the other outputs we can describe a distribution of the Expected Annual Damages for each structure which represents our inability to "know" what the true expected annual damage at a structure will be.</p>
 
 </div>
 </div>
@@ -13341,8 +13399,8 @@ require(
       waitSeconds: 15
     },
     [
-      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js",
-      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"
+      "reveal.js/lib/js/head.min.js",
+      "reveal.js/js/reveal.js"
     ],
 
     function(head, Reveal){
@@ -13357,9 +13415,9 @@ require(
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
-                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/classList.js",
+                { src: "reveal.js/lib/js/classList.js",
                   condition: function() { return !document.body.classList; } },
-                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/notes/notes.js",
+                { src: "reveal.js/plugin/notes/notes.js",
                   async: true,
                   condition: function() { return !!document.body.classList; } }
             ]
