@@ -220,11 +220,25 @@ def add_emperical_plot_full(aeps, aep_qs, emp_q, emp_ri, skew, mu, sigma, color=
 
 
 def add_bootstrap_plot_full(aeps, aep_qs, skew, mu, sigma, nbs=1, nsamples=50, color="brown", s=25):
+    """
+    Analyitcal Bootstrap with Empirical Plotting 
+    """
     f, a = plot_aep_full(aeps, aep_qs, skew, mu, sigma)
     for i in range(0, nbs):
-        r = pearson3.rvs(skew, loc=mu, scale=sigma, size=nsamples)
-        emp_q, emp_ri = ecdf(r)
-        a.scatter(x=emp_ri, y=sorted(10 ** np.array(emp_q), reverse=True), color=color, s=s)
+        rvs = pearson3.rvs(skew, loc=mu, scale=sigma, size=nsamples)
+        
+        lp3_data = LP3(rvs)
+        log_peaks = lp3_data.log
+        skew_new = lp3_data.weighted_skew(rskew, rskew_mse)
+        mu_new = lp3_data.log.mean()
+        sigma_new = lp3_data.log.std()
+        
+        x = np.linspace(
+            pearson3.ppf(0.0001, skew_new, loc=mu_new, scale=sigma_new), pearson3.ppf(0.9999, skew, loc=mu, scale=sigma), 100
+        )
+
+        fax2.plot(pearson3.pdf(x, skew_new, loc=mu_new, scale=sigma_new), 10 ** x, "black", lw=2, alpha=1, label="pearson3 pdf")
+
     a.set_title(f"{nbs} Bootstraps", fontsize=20)
     return f, a
 
@@ -232,6 +246,9 @@ def add_bootstrap_plot_full(aeps, aep_qs, skew, mu, sigma, nbs=1, nsamples=50, c
 def add_bootstrap_plot_from_sample_pop_full(
     aeps, aep_qs, skew, mu, sigma, rskew, rskew_mse, nbs=1, nsamples=10, color="brown", nx=200, s=25
 ):
+    """
+    Bootstrap with Empirical Plotting 
+    """
     f, a = plot_aep_full(aeps, aep_qs, skew, mu, sigma)
     xs = np.linspace(0.9999, 0.0001, nx)
 
@@ -253,3 +270,22 @@ def add_bootstrap_plot_from_sample_pop_full(
             a.scatter(x=xs, y=ys, color=color, s=s)
     a.set_title(f"{nsamples}: Samples -- {nbs} Bootstraps", fontsize=20)
     return f, a
+
+def add_emperical_bootstrap(bootstraps, aeps, aep_qs, skew, mu, sigma, nbs=1, nsamples=50, color="brown", s=25):
+    
+    f, a = plot_aep_full(aeps, aep_qs, skew, mu, sigma)
+    xs = np.linspace(0.9999, 0.0001, 100)
+
+    for i in range(0, nbs):
+        rvs = np.random.choice(aep_qs, size=nsamples)
+        emp_q, emp_ri = ecdf(rvs)
+        bootstraps.append((emp_q, emp_ri))
+        
+    for idx, b in enumerate(bootstraps):
+        emp_q, emp_ri = np.array(b[0]), np.array(b[1])
+        a.scatter(x=emp_ri, y=sorted(emp_q, reverse=True), color=color, s=s)
+#         print(idx, emp_ri.mean(), emp_q.mean())
+        
+    a.set_title(f"{len(bootstraps)} Bootstraps", fontsize=20)
+
+    return bootstraps, f, a
