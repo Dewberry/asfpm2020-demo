@@ -13233,6 +13233,13 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="An-example-Deterministic-System">An example Deterministic System<a class="anchor-link" href="#An-example-Deterministic-System">&#182;</a></h2><p><img src="images/DeterministicProcess2.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>In this process, for a 100 year precipitation event (assuming we actually could say we knew what that was!) we compute a flow (which is not likely to be the 100 year flow) which produces a stage, and then a damage...</p>
 
 </div>
@@ -13242,6 +13249,13 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Probabilistic">Probabilistic<a class="anchor-link" href="#Probabilistic">&#182;</a></h2><p><img src="images/Probabilistic.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>A probabilistic system introduces randomness into the system by varying things like initial conditions. As a comparative definition to our deterministic definition: In a probabilistic system, for a given input and a set of random initial conditions, we produce a distribution of outputs.</p>
 
 </div>
@@ -13258,6 +13272,13 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Rainfall-Runoff">Rainfall Runoff<a class="anchor-link" href="#Rainfall-Runoff">&#182;</a></h3><p><img src="images/RainfallRunoff_Probabilistic3.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>This series of images helps to show more what a truthful representation of a system might be - firstly, for the same precipitation above(which we called the 100 year rainfall), let's look at intensity and duration for the same volume. We can talk more about what the challenges of statistics for precipitation events later...for this example, let's say here "our best estimate peak 100 year precipitation..."</p>
 
 </div>
@@ -13267,6 +13288,13 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Hydraulics">Hydraulics<a class="anchor-link" href="#Hydraulics">&#182;</a></h3><p><img src="images/Hydraulics_Probabilistic3.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>The precipitation event above could realistically produce a range of flows. If we were to take the same flow as produced before in the deterministic model and imagine using a probabilistic model for the computation of stage (or water depth at a structure) we would see a range of depths because we don't really know the initial conditions or behaviors of the system.</p>
 
 </div>
@@ -13276,6 +13304,13 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Damages">Damages<a class="anchor-link" href="#Damages">&#182;</a></h3><p><img src="images/Economics_Probabilistic3.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>As you see above, the deterministic flow could really produce a range of depths at the structure. If we were to take that same deterministic depth and compute a probabilistic damage, we see there could really be a range of damages because we don't really know everything about what would result in damages in an "average" house.</p>
 
 </div>
@@ -13295,6 +13330,13 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Combining-It-all-together-with-Event-Sampling-and-Monte-Carlo">Combining It all together with Event Sampling and Monte Carlo<a class="anchor-link" href="#Combining-It-all-together-with-Event-Sampling-and-Monte-Carlo">&#182;</a></h1><p><img src="images/sampling.gif" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>You might be wondering, how do we get this right? There are so many possible outcomes, how can we combine this correctly? The answer is simple, composition of functions with Riemann Integration obviously...(mathematicians think they are cool). The common language for this is <code>A Systems Event Based Monte Carlo</code>.</p>
 
 </div>
@@ -13304,6 +13346,13 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="images/gridded_compute.gif" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>In this type of modeling framework, a series of deterministic runs, each with a randomized initial condition (which can be correlated or the same across models e.g. starting pool in the reservoirs if they are represented in many models) with each simulated event within a realization we are evaluating natural variability, with each realization we are evaluating our knowledge uncertainties. This gives us the ability to express our inability to know,and the natural variability of our systems and combine the models into a singular system model that can support decision making.</p>
 <p>Through this type of modeling each event is equally likely to occur, so the resulting floodplains and damages can be utilized to describe the distribution of expected losses through simple computations like the one shown above.</p>
 
@@ -13321,6 +13370,13 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Study-Area">Study Area<a class="anchor-link" href="#Study-Area">&#182;</a></h2><p><img src="images/StudyArea.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>In this example, we had a study area on a regulated river with a levee providing risk mitigation to an area with many buildings. The area had two locations that were modeled as likely breach locations (these are signified by the yellow dots in the image below). The breach locations included fragility curves to describe the likelihood that the levee might breach when loaded. These were one of the initial conditions sampled within the hydraulics model. We computed 10,000 events using HEC-WAT with the Hydrologic Sampler, HEC-RAS, the Fragility Curve Sampler, a consequence engine, and the AEP_Grid to produce the results shown in the images that follow.</p>
 
 </div>
@@ -13330,6 +13386,13 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Representing-the-Natural-Variability-and-Knowledge-Uncertainty-in-Flow">Representing the Natural Variability and Knowledge Uncertainty in Flow<a class="anchor-link" href="#Representing-the-Natural-Variability-and-Knowledge-Uncertainty-in-Flow">&#182;</a></h2><p><img src="images/bootstrapped_HS.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>An empirical frequency curve with uncertainty was developed and utilized to describe the flow in the river and how the regulation of the upstream dam impacts the flow boundary condition. A few historic shape-sets were leveraged for scaling the flood hydrograph. As you can see here we have 20 realizations of 500 events each to construct the 10,000 events. This allows us to compute 20 different estimates (one for each realization) for any of our decision metrics.</p>
 
 </div>
@@ -13347,6 +13410,13 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Times-Wet-Grid">Times Wet Grid<a class="anchor-link" href="#Times-Wet-Grid">&#182;</a></h3><p><img src="images/timesWet.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>As we showed in the images above, we can create a summary grid from each sampled event to produce a database that stores how many times a gridcell gets depth above ground. The image below is a map that represents that database. As you can see, there is variation in the number of times the cells behind a levee get wet. This is due to the presence or absence of a breach, which location breached, if one breached before the other, the peak flow, the shape of the hydrograph, topographical relief, and many other conditions governing the way flow gets converted into depth. Even though the levee may have a specified overtopping frequency for its design, all cells within the leveed area will not necessarily get wet the same number of times, that depends on the characteristics of the events themselves. One of these grids can be created based off of a summary of all of the realizations (representing our best estimate) and for each realization independently giving us the ability to express our uncertainty in how many times a cell might get wet.</p>
 
 </div>
@@ -13356,6 +13426,13 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Annual-Exceedance-Probability-Grid">Annual Exceedance Probability Grid<a class="anchor-link" href="#Annual-Exceedance-Probability-Grid">&#182;</a></h3><p><img src="images/AEP_WithBreaches.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>This grid can be easily converted into an Annual Exceedance Probability grid by simply dividing by the number of events that were used to create it. in out case there were 10,000 events. The cells now represent a likelihood of getting water above the ground elevation. Similar grids can be constructed from any sort of output parameter and threshold criteria (e.g. a Annual Velocity Exceedance Grid which represents likelihood of Velocity over some threshold).</p>
 <p>Like the previous summary grid we could create a singular representation (like the one presented above) showing our best guess at the likelihood of a cell getting wet, or we could create 20 different grids and summarize the variation in estimates at each cell as a distribution of Expected Annual Exceedance Probabilities.</p>
 
@@ -13366,6 +13443,13 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Annual-Exceedance-Probability-at-a-building">Annual Exceedance Probability at a building<a class="anchor-link" href="#Annual-Exceedance-Probability-at-a-building">&#182;</a></h3><p><img src="images/AEP_Structure.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Another interesting view of the hydraulics results across a floodplain is a description of the count of times a structure gets wet. In this case we tracked depth above ground, but the depth above first floor elevation (unique to each structure) could just as easily be tracked. These could be displayed as our best estimate of the likelihood of the ground around a home getting wet, or a distribution of the likelihoods (based on a summary of the 20 realizations) a structure gets wet.</p>
 
 </div>
@@ -13375,6 +13459,13 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Summarizing-Economic-Damages">Summarizing Economic Damages<a class="anchor-link" href="#Summarizing-Economic-Damages">&#182;</a></h2><p><img src="images/EAD_Structure.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>During the Monte Carlo process many variables are unknown in how much damage may happen for a given depth at the structure. These are sampled with each event and summarized into an Expected Annual Damage at each structure. The summary is simply computing the average damage. As described with the other outputs we can describe a distribution of the Expected Annual Damages for each structure which represents our inability to "know" what the true expected annual damage at a structure will be.</p>
 
 </div>
