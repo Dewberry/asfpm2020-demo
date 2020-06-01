@@ -11,6 +11,7 @@
 
 ![](images/usace-dewberry.png)
 
+![](images/sampling.gif)
 
 
 ### [__Slideshow__](https://dewberry.github.io/asfpm2020-demo/index.slides.html#/) : View the presentation slideshow here. 
@@ -21,8 +22,9 @@
   - [Gage Data Grabber](gage_data_grabber.ipynb): Includes examples of retrieving information directly from the USGS API at gage locations.
 
 
+![](images/bootstraps.gif)
 
  ---
 
  ### [About Binder](https://mybinder.readthedocs.io/en/latest/) 
- Binder is powered by BinderHub, which is an open-source tool that deploys the Binder service in the cloud. All notebooks in this repository can be opened and executed by clicking the link binder link above!
+All notebooks in this repository can be opened and executed by clicking the link `launch binder` link at the top of the page! Binder is powered by BinderHub, which is an open-source tool that deploys the Binder service in the cloud.
